@@ -298,7 +298,7 @@ GOAL_STATUS_T appl_ecatCreateObjects(
             0x1600,
             0x00,
             GOAL_ECAT_DATATYPE_UNSIGNED8,
-            EC_OBJATTR_RD | EC_OBJATTR_MAN | EC_OBJATTR_NUMERIC,
+            EC_OBJATTR_RD_PREOP | EC_OBJATTR_WR_PREOP | EC_OBJATTR_RD_SAFEOP | EC_OBJATTR_RD_OP | EC_OBJATTR_MAN | EC_OBJATTR_NUMERIC,
             (uint8_t *) &uint8ValueDef,
             (uint8_t *) &uint8ValueMin,
             (uint8_t *) &uint8ValueMax,
@@ -316,7 +316,7 @@ GOAL_STATUS_T appl_ecatCreateObjects(
     if (GOAL_RES_OK(res)) {
 
         uint32ValueMin = 0x00000000;
-        uint32ValueDef = 0x00000000;
+        uint32ValueDef = 0x70000108;
         uint32ValueMax = 0xFFFFFFFF;
 
         res = goal_ecatdynOdSubIndexAdd(
@@ -324,7 +324,7 @@ GOAL_STATUS_T appl_ecatCreateObjects(
             0x1600,
             0x01,
             GOAL_ECAT_DATATYPE_UNSIGNED32,
-            EC_OBJATTR_RD | EC_OBJATTR_NUMERIC | EC_OBJATTR_NO_LIMITS,
+            EC_OBJATTR_RD_PREOP | EC_OBJATTR_WR_PREOP | EC_OBJATTR_RD_SAFEOP | EC_OBJATTR_RD_OP | EC_OBJATTR_NUMERIC | EC_OBJATTR_NO_LIMITS,
             (uint8_t *) &uint32ValueDef,
             (uint8_t *) &uint32ValueMin,
             (uint8_t *) &uint32ValueMax,
@@ -383,7 +383,7 @@ GOAL_STATUS_T appl_ecatCreateObjects(
     if (GOAL_RES_OK(res)) {
 
         uint32ValueMin = 0x00000000;
-        uint32ValueDef = 0x00000000;
+        uint32ValueDef = 0x60000108;
         uint32ValueMax = 0xFFFFFFFF;
 
         res = goal_ecatdynOdSubIndexAdd(

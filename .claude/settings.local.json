@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"riop_command\\\\|PdoRx\\\\|PdoTx\\\\|ICC_DataHandle\" /mnt/c/FACTS_Stuff/Repos/Ecat_Test/rd-riop-ecat-1.5.0/riop_ECAT --include=\"*.c\" --include=\"*.h\" 2>/dev/null | head -30)",
+      "Bash(find /mnt/c/FACTS_Stuff/Repos/Ecat_Test/rd-riop-ecat-1.5.0/riop_ECAT/M7FOLLOWER -type f -name \"*goal*\" 2>/dev/null | head -20)"
+    ]
+  }
+}
